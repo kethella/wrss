@@ -43,7 +43,7 @@ if __name__ == "__main__":
     # wybierz katalog zawiarajacy formularz:
     dirname = askdirectory(parent=w,initialdir="/",title='Please select a directory')
     if len(dirname ) > 0:
-        print "You chose %s" % dirname 
+        print ("You chose %s" % dirname)
     #wybierz plik z nazwiskami:
     f = askopenfile(parent=w,mode='rb',title='Choose a file')
     book = open_workbook(os.path.basename(f.name), on_demand=True)
@@ -61,7 +61,7 @@ if __name__ == "__main__":
         s = str(first_sheet.cell(x+1, 1))[7:-1]
         s=s.decode('unicode-escape')
         names_array.append(s.encode('utf-8'))
-        print names_array[x]
+        print (names_array[x])
     
     Label(w, text="Ilu studentów wylosować?").pack()
     entry = Entry(w)
