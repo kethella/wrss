@@ -3,11 +3,16 @@
 Created on Tue Mar 26 2015
 @author: Karolina Cibor
 """
-from twill.commands import *
-from Tkinter import *
-from tkFileDialog import askopenfile,askdirectory
+
 import random, os
+try:
+    # for Python2
+    from Tkinter import *   
+except ImportError:
+    # for Python3
+    from tkinter import *   
 from xlrd import open_workbook
+from tkFileDialog import askopenfile,askdirectory
 
 def onclick():
    pass
